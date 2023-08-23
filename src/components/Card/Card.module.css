@@ -1,0 +1,13 @@
+.card{
+  display: flex;
+  flex-direction: column;
+}
+
+.card a {
+  text-decoration: none;
+}
+
+.card img {
+  width: 225px;
+  border-radius: 8px;
+}
