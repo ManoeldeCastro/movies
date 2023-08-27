@@ -1,14 +1,19 @@
 import style from './Header.module.css'
 import logoImg from '../../assets/logo.png'
+import { Link } from 'react-router-dom';
 
 /* eslint-disable jsx-a11y/anchor-has-content */
 const Header = () => {
   return (
     <header className={style.header}>
-      <span><img src={logoImg} alt="" /></span>
+      <Link to="/">
+        <span>
+          <img src={logoImg} alt="" />
+        </span>
+      </Link>
       <nav>
-        <a href="#">Home</a>
-        <a href="#">Assistir</a>
+        <Link to={"/"}>Home</Link>
+        <Link to={"/watch"}>Watch</Link>
       </nav>
     </header>
   )
