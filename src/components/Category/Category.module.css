@@ -3,3 +3,14 @@
   flex-direction: column;
 
 }
+
+.category div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+}
+
+.category h2 {
+  padding-block: 1.5rem 1rem; 
+}

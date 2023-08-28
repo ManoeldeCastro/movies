@@ -12,7 +12,7 @@ function PageNotFound() {
       <Header />
       <Container>
         <section className={styles.container}>
-          <p>Not Found</p>
+          <h1>Page not found</h1>
           <img src={ErroImg} alt="Logo with Error" />
         </section>
       </Container>

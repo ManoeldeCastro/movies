@@ -13,7 +13,7 @@ export const Categories = [...new Set(videos.map(video => video.category))].map(
 
 
 
-const Category = ({category, children}) => {
+const Category = () => {
   return (
     <section className={styles.category}>
       {Categories}
