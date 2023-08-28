@@ -1,14 +1,12 @@
+import { Link } from 'react-router-dom'
 import styles from './Card.module.css'
 
 const Card = ({ id }) => {
   return (
     <div className={styles.card}>
-        <a 
-          href={`https://www.youtube.com/watch?v=${id}`} rel='noreferrer noopener'
-          target='_blank'
-        >
+        <Link to={`/watch/${id}`}>
             <img src={`https://img.youtube.com/vi/${id}/mqdefault.jpg`} alt="Capa" />
-        </a>
+        </Link>
     </div>
   )
 }
