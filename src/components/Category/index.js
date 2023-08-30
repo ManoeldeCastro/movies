@@ -3,6 +3,7 @@ import videos from '../../json/videos.json';
 import Card from '../Card';
 
 export const Categories = [...new Set(videos.map(video => video.category))].map(category => {
+  
   return <>
     <h2>{category}</h2>
     <div className='cards'>
