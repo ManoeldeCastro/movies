@@ -12,7 +12,7 @@ const Search = () => {
       <Header />
       <Container>
         <section className={styles.search}>
-          <h2>Find</h2>
+          <h2>Search:</h2>
           <SearchVideoList videos={videos} />
         </section>
       </Container>
