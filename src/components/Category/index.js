@@ -1,25 +1,27 @@
-import styles from './Category.module.css';
-import videos from '../../json/videos.json';
-import Card from '../Card';
+import videos from "../../json/videos.json";
+import styles from "./Category.module.css";
 
-export const Categories = [...new Set(videos.map(video => video.category))].map(category => {
-  
-  return <>
-    <h2>{category}</h2>
-    <div className='cards'>
-      {videos.map(video => video.category === category && <Card id={video.id} key={video.id} />)}
-    </div>
-  </>
-  })
+export const categories = [
+    "Geografia",
+    "Como fazer e usar",
+    "Astronomia e Geografia",
+    "Climatologia, Meteorologia, Vegetação",
+    "Geologia e Hidrografia"
+  ]
 
+export function filterCategory(id) {
+    return videos.filter( video => video.category === categories[id] )
+}
 
-
-const Category = () => {
-  return (
-    <section className={styles.category}>
-      {Categories}
-    </section>
-  )
+function Category({ category, children }) {
+    return (
+        <section className={styles.category}>
+            <h2>{category}</h2>
+            <div>
+                { children }
+            </div>
+        </section>
+    );
 }
 
 export default Category;

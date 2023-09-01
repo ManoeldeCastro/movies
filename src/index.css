@@ -17,8 +17,7 @@ code {
     monospace;
 }
 
-/* formatação geral dos card */
-
+/* formatação geral dos cards */
 .cards {
   display: flex;
   gap: 5px;

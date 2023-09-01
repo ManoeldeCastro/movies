@@ -1,10 +1,7 @@
 .search {
-  padding-top: 84px;
-  display: flex;
-  flex-direction: column;
-  min-height: 980px;
-}
-
-.search h2 {
-  margin-bottom: 15px;
+    width: 100%;
+    min-height: 600px;
+    padding-top: 68px;
+    display: flex;
+    flex-direction: column;
 }

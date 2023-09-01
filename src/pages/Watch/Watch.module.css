@@ -1,4 +1,4 @@
 .watch {
-    padding-top: 84px;
-    height: 89vh;
+    padding-top: 84px; /* 68px + 16px */
+    
 }

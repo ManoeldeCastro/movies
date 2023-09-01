@@ -1,31 +1,31 @@
-import styles from './SearchVideoList.module.css';
-import VideoList from '../VideoList';
-import { useState } from 'react';
+import styles from "./SearchVideoList.module.css";
+import VideoList from "../../components/VideoList";
+import { useState } from "react";
 
+// filtrando videos por categoria ou titulo
 function filterVideos(videos, searchText) {
-  const searchTextLower = searchText.toLowerCase();
-  return videos.filter(
-    (video) =>
-      video.category.toLowerCase().includes(searchTextLower) ||
-      video.title.toLowerCase().includes(searchTextLower),
-  );
+    return videos.filter((video) => video.category.includes(searchText) || video.title.includes(searchText))
 }
 
-const SearchVideoList = ({ videos }) => {
-  const [searchText, setSearchText] = useState('');
-  const foundVideos = filterVideos(videos, searchText);
+function SearchVideoList({ videos }) {
 
-  return (
-    <section className={styles.container}>
-      <input
-        type="search"
-        placeholder="Pesquisar..."
-        onChange={(e) => setSearchText(e.target.value)}
-        value={searchText}
-      />
-      <VideoList videos={foundVideos} emptyHeading={`Sem Vídeos sobre "${searchText}"`}/>
-    </section>
-  );
-};
+    const [ searchText, setSearchText ] = useState('Geografia')
+    const foundVideos = filterVideos(videos, searchText)
+
+    return (
+        <section className={styles.container}>
+            <input
+                type="search"
+                placeholder="Pesquisar..."
+                value={searchText}
+                onChange={event => setSearchText(event.target.value)}
+            />
+            <VideoList
+                videos={foundVideos}
+                emptyHeading={`Sem vídeos sobre "${searchText}"`}
+            />
+        </section>
+    );
+}
 
 export default SearchVideoList;
