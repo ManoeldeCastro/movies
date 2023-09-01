@@ -4,12 +4,11 @@ import './carousel.css'
 const Carousel = ({ children }) => {
   const settings = {
     dots: false,
-    infinite: false,
+    infinite: true,
     speed: 300,
     centerMode: false,
     variableWidth: true,
     adaptiveHeight: true,
-    // slidesToShow: 350,
     slidesToScroll: 1,
   }
 
