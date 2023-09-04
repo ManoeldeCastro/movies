@@ -12,10 +12,17 @@
 }
 
 .header span {
-    font-size: 2rem;
     color: #b71c1c;
+    font-size: 2rem;
     font-weight: 500;
-}
+  }
+  
+  .header span img {
+    width: 6.25rem;
+    background-color: none;
+    text-shadow: none;
+  
+  }
 
 .header a {
     text-decoration: none;
