@@ -5,6 +5,7 @@ import Search from './pages/Search';
 import Watch from './pages/Watch';
 import Favorites from './pages/Favorites';
 import FavoritesProvider from './contexts/Favorites';
+import VideoRegister from './pages/VideoRegister';
 
 function AppRoutes() {
   return (
@@ -13,6 +14,7 @@ function AppRoutes() {
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/watch/:id" element={<Watch />}></Route>
+          <Route path="/register" element={<VideoRegister/>}></Route>
           <Route path="/search" element={<Search />}></Route>
           <Route path="/favorites" element={<Favorites />}></Route>
           <Route path="*" element={<PageNotFound />}></Route>

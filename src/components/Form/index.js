@@ -15,7 +15,7 @@ const Form = () => {
           <div>
             <label htmlFor="">Category</label>
             <select name="" id="">
-              <option value="">Select a category</option>
+              <option value="-">Select a category</option>
             </select>
           </div>
         </div>
