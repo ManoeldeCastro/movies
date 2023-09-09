@@ -13,7 +13,6 @@ function Home() {
       <Header />
       <Banner image="favoritos" /> 
       <Container>
-
         { categories.map((category, index) => 
           <Category category={category}>
             <Carousel>{ filterCategory(index).map((video, index) => <Card id={video.id} key={video.id} /> )}</Carousel>

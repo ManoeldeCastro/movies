@@ -23,7 +23,7 @@ const Form = () => {
     e.preventDefault();
 
     if (!category || category === '-') {
-      setErrors('Erro: Set a category');
+      setErrors('Error: Set a category');
       return;
     } else {
       setErrors('');
@@ -75,7 +75,7 @@ const Form = () => {
         </div>
         <div>
           <button>Register</button>
-          <div>{errors && <p>{errors}</p>}</div>
+          {errors ? <div className={styles.error}> {errors} </div> : ""}
         </div>
       </form>
     </section>
